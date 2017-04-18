@@ -219,12 +219,11 @@ my %aspects = (
         'vlabel' => 'events per second',
         'width' => 600,
         'values' => {
-            'TcpExt_TCPLoss' => {
+            'TcpExt_TCPLossFailures' => {
                 'type' => 'DERIVE',
                 'draw' => 'LINE1',
                 'min' => 0,
-                'label' => 'Data loss events',
-                'info' => 'TCP data loss events',
+                'label' => 'Timeouts in loss state',
             },
             'TcpExt_TCPLostRetransmit' => {
                 'type' => 'DERIVE',
@@ -550,12 +549,6 @@ my %aspects = (
                 'draw' => 'LINE1',
                 'min' => 0,
                 'label' => 'Slow Start retransmissions',
-            },
-            'TcpExt_TCPLossFailures' => {
-                'type' => 'DERIVE',
-                'draw' => 'LINE1',
-                'min' => 0,
-                'label' => 'Timeouts in loss state',
             },
 	    # v3.4 (09e9b813)
             'TcpExt_TCPRetransFail' => {
